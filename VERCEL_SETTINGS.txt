@@ -1,0 +1,17 @@
+# Vercel Auto-Deploy Settings
+
+## Admin Dashboard
+project-name=khattak-admin
+framework=vite
+build-command=npm run build
+output-directory=dist
+install-command=npm install
+root-directory=frontend/admin
+
+## Store Frontend
+project-name=khattak-store
+framework=vite
+build-command=npm run build
+output-directory=dist
+install-command=npm install
+root-directory=frontend/store
