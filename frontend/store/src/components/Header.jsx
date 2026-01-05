@@ -33,7 +33,7 @@ const Header = ({ cartCount }) => {
                             <span className="logo-icon">🛍️</span>
                         )}
                         <span className="logo-text" style={{ fontFamily: theme?.heading_font }}>
-                            {theme?.site_name || "AI Store"}
+                            {theme?.site_name || "ERP E-Recycle"}
                         </span>
                     </Link>
 
