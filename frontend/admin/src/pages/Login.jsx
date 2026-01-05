@@ -40,9 +40,9 @@ function Login() {
         <div className="admin-login-container">
             <div className="glass-morphism login-card">
                 <div className="login-header">
-                    <div className="admin-icon">🛡️</div>
-                    <h1>Admin Portal</h1>
-                    <p>Secure authentication for management</p>
+                    <div className="admin-icon">🛍️</div>
+                    <h1>Khattak Store Admin</h1>
+                    <p>Merchant Management Portal</p>
                 </div>
 
 

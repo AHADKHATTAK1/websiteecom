@@ -40,14 +40,14 @@ const Home = () => {
                     <div className="hero-content">
                         <div className="hero-badge">
                             <Sparkles size={16} />
-                            <span>AI-Powered Shopping</span>
+                            <span>welcome to our store</span>
                         </div>
                         <h1 className="hero-title">
                             {theme?.banner_text || "Shop Smarter with"}
                             {!theme?.banner_text && <span className="gradient-text"> AI Intelligence</span>}
                         </h1>
                         <p className="hero-subtitle">
-                            {theme?.banner_subtext || "Get personalized product recommendations, instant support, and the best deals with our AI-powered shopping assistant."}
+                            {theme?.banner_subtext || "Discover quality products at competitive prices. Fast shipping, secure payments, and excellent customer service guaranteed."}
                         </p>
                         <div className="hero-actions">
                             <Link to="/products" className="btn btn-primary">
@@ -61,7 +61,7 @@ const Home = () => {
                     </div>
                     <div className="hero-image">
                         <div className="hero-card">
-                            <span className="hero-emoji">🛍️</span>
+                            <span className="hero-emoji"> 🛍️</span>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const Home = () => {
                             <div className="feature-icon">
                                 <Sparkles size={32} />
                             </div>
-                            <h3>AI Recommendations</h3>
+                            <h3>informative </h3>
                             <p>Get personalized product suggestions based on your preferences</p>
                         </div>
                         <div className="feature-card">

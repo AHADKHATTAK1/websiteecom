@@ -13,24 +13,51 @@ const ChatWidget = () => {
     ]);
     const [inputMessage, setInputMessage] = useState('');
 
-    const handleSendMessage = () => {
+    const handleSendMessage = async () => {
         if (!inputMessage.trim()) return;
 
         // Add user message
-        setMessages([...messages, {
-            role: 'user',
-            content: inputMessage
-        }]);
+        const userMessage = { role: 'user', content: inputMessage };
+        setMessages([...messages, userMessage]);
+        setInputMessage('');
 
-        // Simulate bot response
-        setTimeout(() => {
+        try {
+            // Call real AI backend
+            const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/chatbot/chat/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: inputMessage,
+                    conversation_history: messages.map(m => ({
+                        role: m.role === 'user' ? 'user' : 'assistant',
+                        content: m.content
+                    }))
+                })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setMessages(prev => [...prev, {
+                    role: 'bot',
+                    content: data.response || data.message
+                }]);
+            } else {
+                // Fallback response
+                setMessages(prev => [...prev, {
+                    role: 'bot',
+                    content: 'I can help you find products, track orders, or answer questions about our store. What would you like to know?'
+                }]);
+            }
+        } catch (error) {
+            console.error('Chat error:', error);
+            // Fallback response on error
             setMessages(prev => [...prev, {
                 role: 'bot',
-                content: 'I can help you find products, track orders, or answer any questions about our store. What would you like to know?'
+                content: 'I\'m here to help! You can ask me about products, orders, or anything else about our store.'
             }]);
-        }, 1000);
-
-        setInputMessage('');
+        }
     };
 
     return (

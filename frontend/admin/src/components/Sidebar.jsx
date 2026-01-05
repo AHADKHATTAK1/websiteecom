@@ -32,16 +32,11 @@ const Sidebar = ({ isOpen, onToggle }) => {
         <aside className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
             <div className="sidebar-header">
                 <div className="logo">
-                    {isOpen && (
-                        <>
-                            <Zap className="logo-icon" />
-                            <span className="logo-text gradient-text">AI Commerce</span>
-                        </>
-                    )}
-                    {!isOpen && <Zap className="logo-icon-small" />}
+                    <span className="logo-icon">🛍️</span>
+                    {isOpen && <span className="logo-text">Khattak Store</span>}
                 </div>
                 <button className="toggle-btn" onClick={onToggle}>
-                    {isOpen ? <X size={20} /> : <Menu size={20} />}
+                    {isOpen ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
                 </button>
             </div>
 
