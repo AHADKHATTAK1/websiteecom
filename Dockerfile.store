@@ -1,0 +1,20 @@
+# Customer Store Dockerfile
+FROM node:24-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY frontend/store/package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy source code
+COPY frontend/store/ .
+
+# Expose port
+EXPOSE 3000
+
+# Start dev server
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
