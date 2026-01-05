@@ -40,23 +40,23 @@ const Home = () => {
                     <div className="hero-content">
                         <div className="hero-badge">
                             <Sparkles size={16} />
-                            <span>welcome to our store</span>
+                            <span>ERP-Powered Recycling</span>
                         </div>
                         <h1 className="hero-title">
-                            {theme?.banner_text || "Shop Smarter with"}
-                            {!theme?.banner_text && <span className="gradient-text"> AI Intelligence</span>}
+                            Transforming E-Waste into
+                            <span className="gradient-text"> Sustainable Value</span>
                         </h1>
                         <p className="hero-subtitle">
-                            {theme?.banner_subtext || "Discover quality products at competitive prices. Fast shipping, secure payments, and excellent customer service guaranteed."}
+                            We provide an ERP-powered electronic recycling system that ensures secure data destruction, compliance, and environmentally responsible e-waste management.
                         </p>
                         <div className="hero-actions">
-                            <Link to="/products" className="btn btn-primary">
-                                Start Shopping
+                            <Link to="/services" className="btn btn-primary">
+                                Get Started
                                 <ArrowRight size={18} />
                             </Link>
-                            <button className="btn btn-secondary">
-                                Learn More
-                            </button>
+                            <Link to="/contact" className="btn btn-secondary">
+                                Contact Our Experts
+                            </Link>
                         </div>
                     </div>
                     <div className="hero-image">
@@ -75,22 +75,22 @@ const Home = () => {
                             <div className="feature-icon">
                                 <Sparkles size={32} />
                             </div>
-                            <h3>informative </h3>
-                            <p>Get personalized product suggestions based on your preferences</p>
+                            <h3>Electronic Waste Recycling</h3>
+                            <p>Comprehensive recycling for computers, phones, servers, and all electronics</p>
                         </div>
                         <div className="feature-card">
                             <div className="feature-icon">
                                 <ShoppingBag size={32} />
                             </div>
-                            <h3>Easy Shopping</h3>
-                            <p>Browse and buy with our intuitive, user-friendly interface</p>
+                            <h3>Secure Data Destruction</h3>
+                            <p>Certified data wiping and physical destruction with compliance reporting</p>
                         </div>
                         <div className="feature-card">
                             <div className="feature-icon">
                                 <Zap size={32} />
                             </div>
-                            <h3>Fast Delivery</h3>
-                            <p>Quick and reliable shipping to your doorstep</p>
+                            <h3>ERP-Powered Tracking</h3>
+                            <p>Real-time asset tracking and automated compliance documentation</p>
                         </div>
                     </div>
                 </div>

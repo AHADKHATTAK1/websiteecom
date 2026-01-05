@@ -17,11 +17,11 @@ const Footer = () => {
                 }}>
                     <div>
                         <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <span>🛍️</span>
-                            Khattak Store
+                            <span>♻️</span>
+                            ERP E-Recycle Solutions
                         </h3>
                         <p style={{ color: '#94a3b8', lineHeight: '1.7', marginBottom: '1rem' }}>
-                            Your trusted online marketplace for quality products. We deliver excellence with every order.
+                            Smart ERP Solutions for Responsible E-Waste Recycling. Protecting the planet through technology-driven recycling.
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', fontSize: '1.5rem' }}>
                             <a href="#" aria-label="Facebook">📘</a>
