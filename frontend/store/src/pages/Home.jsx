@@ -96,27 +96,71 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Featured Products */}
-            <section className="featured-products">
+
+            {/* Trending Categories */}
+            <section className="categories-section">
                 <div className="container">
-                    <div className="section-header">
-                        <h2>Featured Products</h2>
-                        <Link to="/products" className="view-all">
-                            View All <ArrowRight size={18} />
+                    <h2 className="section-title">Trending Categories</h2>
+                    <div className="categories-grid">
+                        <Link to="/products?cat=batteries" className="category-card">
+                            <div className="category-icon">🔋</div>
+                            <h3>Laptop Batteries</h3>
+                        </Link>
+                        <Link to="/products?cat=chargers" className="category-card">
+                            <div className="category-icon">🔌</div>
+                            <h3>Chargers</h3>
+                        </Link>
+                        <Link to="/products?cat=keyboards" className="category-card">
+                            <div className="category-icon">⌨️</div>
+                            <h3>Keyboards</h3>
+                        </Link>
+                        <Link to="/products?cat=ram" className="category-card">
+                            <div className="category-icon">💾</div>
+                            <h3>RAM</h3>
+                        </Link>
+                        <Link to="/products?cat=screens" className="category-card">
+                            <div className="category-icon">🖥️</div>
+                            <h3>Screens</h3>
+                        </Link>
+                        <Link to="/products?cat=hubs" className="category-card">
+                            <div className="category-icon">🔗</div>
+                            <h3>Type-C Hubs</h3>
+                        </Link>
+                        <Link to="/products?cat=audio" className="category-card">
+                            <div className="category-icon">🎧</div>
+                            <h3>Audio</h3>
+                        </Link>
+                        <Link to="/products?cat=storage" className="category-card">
+                            <div className="category-icon">💽</div>
+                            <h3>Storage</h3>
                         </Link>
                     </div>
-                    <div className="grid grid-4">
-                        {featuredProducts.map(product => (
-                            <Link to={`/product/${product.id}`} key={product.id} className="product-card card">
-                                <div className="product-badge badge badge-success">{product.badge}</div>
-                                <div className="product-image">{product.image}</div>
-                                <h3 className="product-name">{product.name}</h3>
-                                <div className="product-footer">
-                                    <span className="product-price">${product.price}</span>
-                                    <button className="btn-quick-add">Add to Cart</button>
-                                </div>
-                            </Link>
-                        ))}
+                </div>
+            </section>
+
+            {/* Recycling Services */}
+            <section className="services-section">
+                <div className="container">
+                    <h2 className="section-title">Our Recycling Services</h2>
+                    <div className="grid grid-3">
+                        <div className="service-card">
+                            <div className="service-icon">♻️</div>
+                            <h3>E-Waste Pickup</h3>
+                            <p>Schedule free pickup for your old electronics</p>
+                            <Link to="/services" className="service-link">Learn More →</Link>
+                        </div>
+                        <div className="service-card">
+                            <div className="service-icon">🔒</div>
+                            <h3>Data Destruction</h3>
+                            <p>Certified secure data wiping & physical destruction</p>
+                            <Link to="/services" className="service-link">Learn More →</Link>
+                        </div>
+                        <div className="service-card">
+                            <div className="service-icon">📜</div>
+                            <h3>Recycling Certificates</h3>
+                            <p>Get compliance certificates for corporate recycling</p>
+                            <Link to="/services" className="service-link">Learn More →</Link>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -125,11 +169,16 @@ const Home = () => {
             <section className="cta-section">
                 <div className="container">
                     <div className="cta-card">
-                        <h2>Experience AI-Powered Shopping Today</h2>
-                        <p>Join thousands of happy customers and discover a smarter way to shop</p>
-                        <Link to="/products" className="btn btn-primary btn-lg">
-                            Browse Products <ArrowRight size={20} />
-                        </Link>
+                        <h2>Ready to Recycle or Shop?</h2>
+                        <p>Browse quality laptop parts or schedule your e-waste pickup today</p>
+                        <div className="cta-buttons">
+                            <Link to="/products" className="btn btn-primary btn-lg">
+                                Shop Products <ArrowRight size={20} />
+                            </Link>
+                            <Link to="/contact" className="btn btn-secondary btn-lg">
+                                Schedule Pickup
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
