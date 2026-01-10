@@ -1,32 +1,39 @@
-/* Promotional Banner */
+/* Promotional Banner - Full Width */
 .promo-banner {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    padding: 2rem 0;
-    margin-bottom: 2rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .banner-image-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
     transition: transform 0.3s ease;
 }
 
 .banner-image-wrapper:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .banner-image {
     display: block;
     width: 100%;
     height: auto;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
     .promo-banner {
-        padding: 1rem 0;
+        padding: 0;
+    }
+
+    .banner-image {
+        max-height: 300px;
     }
 }
 
