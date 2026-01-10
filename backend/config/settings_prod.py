@@ -29,6 +29,15 @@ MEDIA_URL = '/media/'
 # CORS
 CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ORIGINS', 'http://localhost:3000').split(',')
 
+# CSRF Trusted Origins (CRITICAL for Railway deployment)
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-615d5.up.railway.app',
+    'https://*.railway.app',
+    'https://websiteecom-six.vercel.app',
+    'https://websiteecom.vercel.app',
+]
+
+
 # Security settings
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
