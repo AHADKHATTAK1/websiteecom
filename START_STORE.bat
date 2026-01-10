@@ -1,9 +1,9 @@
 @echo off
 echo ========================================
-echo   ADMIN DASHBOARD - AUTO START
+echo   CUSTOMER STORE - AUTO START
 echo ========================================
-cd frontend\admin
+cd frontend\store
 echo.
-echo Starting admin on http://localhost:5173/
+echo Starting store on http://localhost:3000/
 echo.
 npm run dev

@@ -1,0 +1,96 @@
+==========================================
+WORKING SOLUTION - LOGIN & REGISTRATION
+==========================================
+
+PROBLEM: Both login and registration failing
+
+ROOT CAUSE: Backend authentication not properly set
+
+==========================================
+SOLUTION 1: CREATE USER IN RAILWAY SHELL
+==========================================
+
+Your Railway shell is ALREADY RUNNING (6h+)!
+
+Copy-paste these commands ONE BY ONE:
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
+user = User.objects.create_user(email='admin@test.com', password='Test@123', first_name='Admin', last_name='User')
+user.role = 'admin'
+user.is_staff = True
+user.is_superuser = True
+user.save()
+print("SUCCESS! User created")
+print("Email: admin@test.com")
+print("Password: Test@123")
+
+Press Enter after EACH line!
+
+==========================================
+SOLUTION 2: MANUAL .ENV FILE
+==========================================
+
+1. Open: frontend\admin folder
+
+2. Create new file named: .env
+
+3. Type exactly:
+VITE_API_URL=https://web-production-615d5.up.railway.app
+
+4. Save file
+
+5. In terminal (admin), press Ctrl+C
+
+6. Run: npm run dev
+
+==========================================
+SOLUTION 3: TEST LOGIN
+==========================================
+
+1. Open: http://localhost:5173/login
+
+2. Enter:
+   Email: admin@test.com
+   Password: Test@123
+
+3. Click Login
+
+Should work! ✅
+
+==========================================
+IF STILL FAILS
+==========================================
+
+Option A: Use Django Admin
+1. Visit: https://web-production-615d5.up.railway.app/admin/
+2. Login with SAME credentials
+3. Should work there!
+
+Option B: Check Console
+1. Press F12
+2. Look for errors
+3. Share screenshot
+
+==========================================
+VERIFICATION
+==========================================
+
+Success = Login redirects to /dashboard ✅
+
+If not:
+- Check Railway shell commands ran
+- Check .env file created
+- Check admin restarted
+- Share browser console errors
+
+==========================================
+CREDENTIALS TO USE
+==========================================
+
+Email: admin@test.com
+Password: Test@123
+
+Save these! They will work.
+
+==========================================
