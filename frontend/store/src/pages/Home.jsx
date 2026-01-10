@@ -97,11 +97,6 @@ const Home = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="hero-image">
-                        <div className="hero-card">
-                            <span className="hero-emoji"> 🛍️</span>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -141,35 +136,51 @@ const Home = () => {
                     <h2 className="section-title">Trending Categories</h2>
                     <div className="categories-grid">
                         <Link to="/products?cat=batteries" className="category-card">
-                            <div className="category-icon">🔋</div>
+                            <div className="category-icon">
+                                <img src="/images/laptop_battery.png" alt="Laptop Batteries" />
+                            </div>
                             <h3>Laptop Batteries</h3>
                         </Link>
                         <Link to="/products?cat=chargers" className="category-card">
-                            <div className="category-icon">🔌</div>
+                            <div className="category-icon">
+                                <img src="/images/laptop_charger.png" alt="Chargers" />
+                            </div>
                             <h3>Chargers</h3>
                         </Link>
                         <Link to="/products?cat=keyboards" className="category-card">
-                            <div className="category-icon">⌨️</div>
+                            <div className="category-icon">
+                                <img src="/images/mechanical_keyboard.png" alt="Keyboards" />
+                            </div>
                             <h3>Keyboards</h3>
                         </Link>
                         <Link to="/products?cat=ram" className="category-card">
-                            <div className="category-icon">💾</div>
+                            <div className="category-icon">
+                                <img src="/images/ram_memory.png" alt="RAM" />
+                            </div>
                             <h3>RAM</h3>
                         </Link>
                         <Link to="/products?cat=screens" className="category-card">
-                            <div className="category-icon">🖥️</div>
+                            <div className="category-icon">
+                                <img src="/images/laptop_screen.png" alt="Screens" />
+                            </div>
                             <h3>Screens</h3>
                         </Link>
                         <Link to="/products?cat=hubs" className="category-card">
-                            <div className="category-icon">🔗</div>
+                            <div className="category-icon">
+                                <img src="/images/usbc_hub.png" alt="Type-C Hubs" />
+                            </div>
                             <h3>Type-C Hubs</h3>
                         </Link>
                         <Link to="/products?cat=audio" className="category-card">
-                            <div className="category-icon">🎧</div>
+                            <div className="category-icon">
+                                <img src="/images/headphones_audio.png" alt="Audio" />
+                            </div>
                             <h3>Audio</h3>
                         </Link>
                         <Link to="/products?cat=storage" className="category-card">
-                            <div className="category-icon">💽</div>
+                            <div className="category-icon">
+                                <img src="/images/ssd_storage.png" alt="Storage" />
+                            </div>
                             <h3>Storage</h3>
                         </Link>
                     </div>
