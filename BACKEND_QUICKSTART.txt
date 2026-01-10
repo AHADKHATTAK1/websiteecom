@@ -1,0 +1,63 @@
+=================================================
+BACKEND SETUP - QUICK COMMANDS
+=================================================
+
+PROBLEM: Backend not running - login fails
+SOLUTION: Run backend in WSL2
+
+-------------------------------------------------
+STEP 1: INSTALL WSL2 (One Time Only)
+-------------------------------------------------
+Open PowerShell AS ADMINISTRATOR:
+  wsl --install
+
+Restart computer.
+
+-------------------------------------------------
+STEP 2: SETUP IN UBUNTU (First Time)
+-------------------------------------------------
+Open "Ubuntu" from Start menu
+
+Run these commands:
+  sudo apt update
+  sudo apt install python3 python3-pip python3-venv -y
+  cd /mnt/c/Users/anzah\ computer/Desktop/WEBSITE\ ECOMERCE
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  cd backend
+  python manage.py migrate
+  python manage.py createsuperuser
+    (Enter username, email, password)
+  python manage.py load_api_providers
+
+-------------------------------------------------
+STEP 3: START BACKEND (Every Time)
+-------------------------------------------------
+Open "Ubuntu" terminal:
+  cd /mnt/c/Users/anzah\ computer/Desktop/WEBSITE\ ECOMERCE
+  source venv/bin/activate
+  cd backend
+  python manage.py runserver
+
+Backend runs on: http://localhost:8000
+
+KEEP THIS TERMINAL OPEN!
+
+-------------------------------------------------
+CURRENT STATUS
+-------------------------------------------------
+✅ Admin Frontend: Running on port 5173
+❌ Backend API: NOT running (need to follow steps above)
+
+-------------------------------------------------
+AFTER BACKEND STARTS
+-------------------------------------------------
+Go to http://localhost:5173
+Login with credentials from STEP 2
+
+Both frontend AND backend must be running!
+
+=================================================
+DETAILED GUIDE: backend_setup_wsl.md
+=================================================

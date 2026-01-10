@@ -1,0 +1,88 @@
+# ========================================
+# QUICK FIX CHECKLIST - Admin Dashboard
+# ========================================
+# Follow these steps in order:
+
+# STEP 1: FIX WINDOWS (Most Important!)
+# ---------------------------------------
+# Open Command Prompt AS ADMINISTRATOR:
+#   - Press Windows Key
+#   - Type: cmd
+#   - Right-click "Command Prompt"
+#   - Click "Run as administrator"
+#
+# Then run:
+#   sfc /scannow
+#   (Wait 20-30 minutes)
+#
+#   DISM /Online /Cleanup-Image /RestoreHealth
+#   (Wait 20-30 minutes)
+#
+# Restart computer
+
+# STEP 2: TRY RUNNING ADMIN DASHBOARD
+# ------------------------------------
+# Double-click in project folder:
+#   start_admin.bat
+#
+# OR open Command Prompt and type:
+#   cd "c:\Users\anzah computer\Desktop\WEBSITE ECOMERCE\frontend\admin"
+#   npm run dev
+#
+# Expected output:
+#   VITE v5.x.x  ready in xxx ms
+#   ➜  Local:   http://localhost:5173/
+
+# STEP 3: IF STILL FAILS - TRY WSL2
+# ----------------------------------
+# Open PowerShell AS ADMINISTRATOR:
+#   wsl --install
+#
+# Restart computer
+#
+# After restart, open "Ubuntu" from Start menu
+# In Ubuntu terminal:
+#   cd /mnt/c/Users/anzah\ computer/Desktop/WEBSITE\ ECOMERCE/frontend/admin
+#   npm install
+#   npm run dev
+
+# STEP 4: IF WSL2 WORKS - USE IT PERMANENTLY
+# -------------------------------------------
+# Every time you want to run admin:
+#   1. Open Ubuntu from Start menu
+#   2. cd /mnt/c/Users/anzah\ computer/Desktop/WEBSITE\ ECOMERCE/frontend/admin
+#   3. npm run dev
+#   4. Open browser: http://localhost:5173
+
+# STEP 5: ACCESS ADMIN DASHBOARD
+# -------------------------------
+# Once server is running, open any browser:
+#   http://localhost:5173
+#
+# Default login (if backend is running):
+#   Check backend for superuser credentials
+
+# ========================================
+# CREATED FILES FOR YOU:
+# ========================================
+# - start_admin.bat (in project root)
+#   Double-click to start admin dashboard
+#
+# - start_demo.bat (already existed)
+#   Starts backend + admin + store
+#
+# DOCUMENTATION:
+# - quick_start_admin.md
+# - admin_dashboard_guide.md
+# - complete_setup_solutions.md
+# - advanced_troubleshooting.md
+
+# ========================================
+# CURRENT ISSUE:
+# ========================================
+# Error: -1073741819 (0xC0000005)
+# Cause: Windows system corruption or DLL issues
+# Solution: Follow STEP 1 above (sfc /scannow)
+#
+# Best Alternative: WSL2 (STEP 3)
+# This bypasses Windows issues completely!

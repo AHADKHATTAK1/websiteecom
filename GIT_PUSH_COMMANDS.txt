@@ -1,0 +1,65 @@
+========================================
+GIT PUSH COMMANDS - YOUR REPOSITORY
+========================================
+Repository: https://github.com/AHADKHATTAK1/websiteecom.git
+
+QUICK PUSH (Copy and Paste These Commands)
+========================================
+
+Open Git Bash or Command Prompt, then:
+
+cd "c:\Users\anzah computer\Desktop\WEBSITE ECOMERCE"
+
+git add .
+
+git commit -m "feat: Add promotional banner to store homepage
+
+- Added promotional banner section with uploaded image
+- Created banner CSS with gradient background and hover effects
+- Added smart fallback banner if image fails to load
+- Created startup scripts (start_admin.bat, test_system.bat)
+- Added WSL backend launcher and setup guides"
+
+git push origin main
+
+========================================
+IF PUSH FAILS - TRY THESE
+========================================
+
+1. Check if remote is set correctly:
+   git remote -v
+
+2. If no remote, add it:
+   git remote add origin https://github.com/AHADKHATTAK1/websiteecom.git
+
+3. If wrong remote, update it:
+   git remote set-url origin https://github.com/AHADKHATTAK1/websiteecom.git
+
+4. If branch is different, check your branch:
+   git branch
+   
+   Then push to your branch:
+   git push origin <your-branch-name>
+
+5. If rejected, pull first:
+   git pull origin main --rebase
+   git push origin main
+
+========================================
+VERIFY AFTER PUSH
+========================================
+Visit: https://github.com/AHADKHATTAK1/websiteecom
+
+You should see your latest commit!
+
+========================================
+FILES BEING PUSHED
+========================================
+✅ frontend/store/src/pages/Home.jsx (banner added)
+✅ frontend/store/src/pages/Home.css (banner styles)
+✅ start_admin.bat
+✅ test_system.bat  
+✅ start_backend_wsl.sh
+✅ CHECKLIST_ADMIN_FIX.txt
+✅ BACKEND_QUICKSTART.txt
+✅ git_push.bat

@@ -34,6 +34,44 @@ const Home = () => {
 
     return (
         <div className="home">
+            {/* Promotional Banner */}
+            <section className="promo-banner">
+                <div className="container">
+                    <div className="banner-image-wrapper">
+                        <img
+                            src="/uploaded_banner.png"
+                            alt="Smart ERP Powered Electronic Recycling - Computers, Phones, Keyboards"
+                            className="banner-image"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                maxHeight: '400px',
+                                objectFit: 'cover',
+                                borderRadius: '12px'
+                            }}
+                            onError={(e) => {
+                                // Fallback: Show color banner with text if image fails to load
+                                e.target.style.display = 'none';
+                                e.target.parentElement.innerHTML = `
+                                    <div style="background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%); 
+                                                padding: 3rem; 
+                                                text-align: center; 
+                                                border-radius: 12px;
+                                                color: white;">
+                                        <h2 style="font-size: 2.5rem; margin: 0; font-weight: 800;">
+                                            🖥️ SMART ERP POWERED ELECTRONIC RECYCLING 🔄
+                                        </h2>
+                                        <p style="font-size: 1.2rem; margin-top: 1rem;">
+                                            Sustainable Solutions for Laptops, Phones, Keyboards & More
+                                        </p>
+                                    </div>
+                                `;
+                            }}
+                        />
+                    </div>
+                </div>
+            </section>
+
             {/* Hero Section */}
             <section className="hero">
                 <div className="container">

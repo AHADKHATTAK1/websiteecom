@@ -1,3 +1,35 @@
+/* Promotional Banner */
+.promo-banner {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.banner-image-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.banner-image-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.banner-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .promo-banner {
+        padding: 1rem 0;
+    }
+}
+
 .hero {
     background: linear-gradient(135deg, #f0f4ff 0%, #e9f0ff 100%);
     padding: 4rem 0;
