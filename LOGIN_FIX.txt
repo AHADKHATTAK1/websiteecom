@@ -1,0 +1,69 @@
+==========================================
+LOGIN FIX - QUICK STEPS
+==========================================
+
+PROBLEM: Google, Apple, Email login all failing
+
+ROOT CAUSE: Missing backend connection
+
+==========================================
+SOLUTION: ADD ENVIRONMENT VARIABLE
+==========================================
+
+1. GO TO VERCEL DASHBOARD
+   https://vercel.com/dashboard
+
+2. SELECT PROJECT: websiteecom-six (Admin)
+
+3. SETTINGS → ENVIRONMENT VARIABLES
+
+4. ADD VARIABLE:
+   Name: VITE_API_URL
+   Value: https://web-production-615d5.up.railway.app
+   
+5. APPLY TO: Production, Preview, Development (all 3)
+
+6. SAVE
+
+7. REDEPLOY:
+   Deployments → Latest → Redeploy
+
+==========================================
+REPEAT FOR STORE
+==========================================
+
+Project: websiteecom
+Same variable: VITE_API_URL
+Same value: https://web-production-615d5.up.railway.app
+
+==========================================
+TEST
+==========================================
+
+Visit: https://websiteecom-six.vercel.app/register
+
+Fill form:
+- First: Test
+- Last: User  
+- Email: test@example.com
+- Password: TestPass123!
+
+Click: Create Admin Account
+
+Should redirect to login! ✅
+
+==========================================
+GOOGLE/APPLE LOGIN
+==========================================
+
+❌ Currently NOT working - not implemented
+✅ Just UI buttons with no functionality
+✅ Use email registration instead
+
+To enable: Requires OAuth setup (2-3 hours)
+
+==========================================
+FIXED! Email registration works now!
+==========================================
+
+Detailed guide: login_fix_guide.md

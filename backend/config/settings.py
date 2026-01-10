@@ -23,8 +23,22 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://mystore.local:3000',
     'http://admin.mystore.local:5173',
+    # Production Vercel URLs
+    'https://websiteecom-six.vercel.app',
+    'https://websiteecom.vercel.app',
 ]
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 ENCRYPTION_KEY = Fernet.generate_key().decode()
 
 # Applications
