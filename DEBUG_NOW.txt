@@ -1,0 +1,116 @@
+==========================================
+CRITICAL - BROWSER CONSOLE CHECK KARO
+==========================================
+
+Exact error dekhna zaroori hai!
+
+==========================================
+STEP 1: OPEN BROWSER CONSOLE
+==========================================
+
+1. Visit: https://websiteecom-six.vercel.app/register
+
+2. Press F12 (DevTools)
+
+3. Go to CONSOLE tab
+
+4. Try registration
+
+5. Look for RED ERROR messages
+
+==========================================
+COMMON ERRORS:
+==========================================
+
+1. "CORS policy" → Backend CORS issue
+2. "Network Error" → Backend not reachable
+3. "404 Not Found" → Wrong API endpoint
+4. "500 Server Error" → Backend crash
+5. Specific field errors → Validation issue
+
+==========================================
+STEP 2: CHECK NETWORK TAB
+==========================================
+
+1. F12 → Network tab
+
+2. Try registration
+
+3. Click on failed request (RED)
+
+4. Look at:
+   - Request URL (should be Railway URL)
+   - Status Code
+   - Response body
+
+==========================================
+STEP 3: MANUAL API TEST
+==========================================
+
+Open browser console and run:
+
+```javascript
+fetch('https://web-production-615d5.up.railway.app/api/auth/register/', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    first_name: 'Test',
+    last_name: 'User',
+    email: 'test123@example.com',
+    password: 'SecurePass123!',
+    password2: 'SecurePass123!',
+    role: 'admin'
+  })
+})
+.then(response => response.json())
+.then(data => console.log('SUCCESS:', data))
+.catch(error => console.error('ERROR:', error));
+```
+
+Share the output!
+
+==========================================
+STEP 4: CHECK RAILWAY DEPLOYMENT
+==========================================
+
+https://railway.app/dashboard
+
+1. Check if latest deployment successful
+2. Look at deployment logs
+3. Any errors?
+
+==========================================
+QUICK TESTS:
+==========================================
+
+Test 1: Backend alive?
+Visit: https://web-production-615d5.up.railway.app/api/
+
+Should show JSON with endpoints
+
+Test 2: Admin panel?
+Visit: https://web-production-615d5.up.railway.app/admin/
+
+Should load Django admin
+
+Test 3: Vercel env var?
+In browser console:
+```javascript
+console.log(import.meta.env.VITE_API_URL)
+```
+
+Should show Railway URL
+
+==========================================
+SCREENSHOT NEEDED:
+==========================================
+
+1. Browser console errors
+2. Network tab failed request
+3. Railway logs (if accessible)
+
+Send screenshot for exact diagnosis!
+
+==========================================

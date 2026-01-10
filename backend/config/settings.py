@@ -41,6 +41,15 @@ CORS_ALLOW_HEADERS = [
 ]
 ENCRYPTION_KEY = Fernet.generate_key().decode()
 
+# CSRF Trusted Origins (for Railway deployment)
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-615d5.up.railway.app',
+    'https://*.railway.app',
+    'https://websiteecom-six.vercel.app',
+    'https://websiteecom.vercel.app',
+]
+
+
 # Applications
 INSTALLED_APPS = [
     'django.contrib.admin',
