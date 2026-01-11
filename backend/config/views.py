@@ -7,7 +7,7 @@ def api_root(request):
     """API root endpoint showing available endpoints"""
     return JsonResponse(
         {
-            "message": "Welcome to AI E-commerce Platform API",
+            "message": "Welcome to AL DAR E-commerce Platform API",
             "version": "1.0",
             "endpoints": {
                 "admin": "/admin/",
