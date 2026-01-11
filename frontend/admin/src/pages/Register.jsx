@@ -30,7 +30,7 @@ function Register() {
         setLoading(true);
 
         try {
-            await api.post('/auth/register/', formData);
+            await api.post('/api/auth/register/', formData);
             navigate('/login');
         } catch (err) {
             setError(err.response?.data?.email?.[0] || err.response?.data?.password?.[0] || 'Registration failed.');
@@ -44,8 +44,8 @@ function Register() {
             <div className="glass-morphism register-card">
                 <div className="register-header">
                     <div className="admin-icon">🧱</div>
-                    <h1>Create Admin</h1>
-                    <p>Register a new management account</p>
+                    <h1>AL DAR Business Admin</h1>
+                    <p>Register a new UAE management account</p>
                 </div>
 
                 {error && (

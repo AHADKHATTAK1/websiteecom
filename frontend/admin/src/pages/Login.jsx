@@ -41,8 +41,8 @@ function Login() {
             <div className="glass-morphism login-card">
                 <div className="login-header">
                     <div className="admin-icon">🛍️</div>
-                    <h1>Khattak Store Admin</h1>
-                    <p>Merchant Management Portal</p>
+                    <h1>AL DAR Business Admin</h1>
+                    <p>UAE Merchant Management Portal</p>
                 </div>
 
 
