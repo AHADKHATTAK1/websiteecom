@@ -1,6 +1,7 @@
-# AI-Powered E-commerce Platform
+# AL DAR - UAE E-commerce Platform
 
-Complete AI-powered automated e-commerce platform with Django backend and React admin dashboard.
+Advanced e-commerce platform for United Arab Emirates market, featuring Django backend, React admin dashboard, and AI-powered customer tools.
+
 
 ## 🚀 Features
 
