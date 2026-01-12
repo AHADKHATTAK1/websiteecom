@@ -4,7 +4,8 @@ import os
 # SECURITY
 DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY', 'CHANGE-THIS-IN-PRODUCTION')
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = ['.vercel.app', '.railway.app', 'localhost', '127.0.0.1', '*']
+
 
 # Database - PostgreSQL for production
 DATABASES = {
