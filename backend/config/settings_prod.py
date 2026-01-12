@@ -22,6 +22,17 @@ DATABASES = {
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+# WhiteNoise storage
+STORAGES = {
+    "default": {
+        "ENGINE": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "ENGINE": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
+
 # Media files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
