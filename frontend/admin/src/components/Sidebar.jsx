@@ -32,8 +32,8 @@ const Sidebar = ({ isOpen, onToggle }) => {
         <aside className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
             <div className="sidebar-header">
                 <div className="logo">
-                    <span className="logo-icon">🛍️</span>
-                    {isOpen && <span className="logo-text">Khattak Store</span>}
+                    <span className="logo-icon">🏗️</span>
+                    {isOpen && <span className="logo-text">AL DAR Admin</span>}
                 </div>
                 <button className="toggle-btn" onClick={onToggle}>
                     {isOpen ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
