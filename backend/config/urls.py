@@ -8,6 +8,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import api_root
 
+# Custom Admin Branding
+admin.site.site_header = "AL DAR Business Admin"
+admin.site.site_title = "AL DAR Admin Portal"
+admin.site.index_title = "Welcome to AL DAR UAE Management"
+
+
 urlpatterns = [
     path("", api_root, name="api_root"),  # API welcome page
     path("admin/", admin.site.urls),
